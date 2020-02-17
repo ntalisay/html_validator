@@ -53,17 +53,16 @@ def _extract_tags(html):
     '''
 
     tags = []
-    l = list(html)
-    i = 0
-    for i in range(len(l)):
-        tag = ""
-        string_ind = l[i]
+    l = ""
+    for i in range(len(html)):
+        string_ind = html[i]
         if string_ind  == '<':
+            n = 0
             while string_ind != '>' :
-                tag += string_ind
-                i += 1
-                string_ind = html[1]
-            out.append(tag)
-        i += 1
+                l += l + html[i + 1]
+                n += 1
+            l += ">"
+            tags.append(tags)
+            l = ""
 
-    return out
+    return tags
