@@ -52,14 +52,14 @@ def _extract_tags(html):
     ['<strong>', '</strong>']
     '''
 
-    out = []
+    tags = []
     l = list(html)
-
+    i = 0
     for i in range(len(l)):
         tag = ""
         string_ind = l[i]
         if string_ind  == '<':
-            while string_ind != '>'and :
+            while string_ind != '>' :
                 tag += string_ind
                 i += 1
                 string_ind = html[1]
