@@ -59,10 +59,13 @@ def _extract_tags(html):
         if string_ind  == '<':
             n = 0
             while string_ind != '>' :
-                l += l + html[i + 1]
+                l += html[i]
                 n += 1
             l += ">"
-            tags.append(tags)
+            tags.append(l)
             l = ""
 
     return tags
+
+_extract_tags('Python <strong>rocks</strong>!')
+
